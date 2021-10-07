@@ -1,0 +1,6 @@
+framework module SnapshotKit {
+  umbrella header "SnapshotKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

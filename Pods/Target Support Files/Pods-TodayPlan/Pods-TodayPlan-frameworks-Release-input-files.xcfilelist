@@ -1,0 +1,15 @@
+${PODS_ROOT}/Target Support Files/Pods-TodayPlan/Pods-TodayPlan-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BiometricAuthentication/BiometricAuthentication.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
+${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework
+${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework
+${BUILT_PRODUCTS_DIR}/MMKV/MMKV.framework
+${BUILT_PRODUCTS_DIR}/MMKVCore/MMKVCore.framework
+${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework
+${BUILT_PRODUCTS_DIR}/Schedule/Schedule.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SnapshotKit/SnapshotKit.framework
+${BUILT_PRODUCTS_DIR}/SpeedySwift/SpeedySwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
+${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework

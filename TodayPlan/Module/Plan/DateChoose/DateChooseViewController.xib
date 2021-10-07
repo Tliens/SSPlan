@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateChooseViewController" customModule="TodayPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="nfx-1d-13g" id="NEj-5k-KE8"/>
+                <outlet property="dateContainerViewTop" destination="rDh-c2-zaK" id="wnN-gx-cM1"/>
+                <outlet property="dateContinerView" destination="3h1-Dd-Dwg" id="ier-5h-La0"/>
+                <outlet property="selectedDateTitleView" destination="2H9-PH-qpq" id="5Ue-hj-8dC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2M-8A-CQG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="1eM-O2-BTx" appends="YES" id="tpK-BH-GHb"/>
+                    </connections>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h1-Dd-Dwg">
+                    <rect key="frame" x="20" y="144" width="374" height="400"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-1d-13g">
+                            <rect key="frame" x="0.0" y="50" width="374" height="350"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PdR-wW-y7m">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021年9月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-PH-qpq">
+                            <rect key="frame" x="142" y="20" width="90" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQG-4Z-bzk">
+                            <rect key="frame" x="85" y="21" width="32" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="1HF-9V-oHe"/>
+                                <constraint firstAttribute="height" constant="20" id="Vbf-AJ-BED"/>
+                            </constraints>
+                            <state key="normal" image="left_month"/>
+                            <connections>
+                                <action selector="left_month_action:" destination="-1" eventType="touchUpInside" id="dH7-Mh-4Js"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF2-bg-5Tz">
+                            <rect key="frame" x="43" y="21" width="35" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="cfd-oj-Sze"/>
+                                <constraint firstAttribute="width" constant="35" id="dtc-fN-ALe"/>
+                            </constraints>
+                            <state key="normal" image="left_year"/>
+                            <connections>
+                                <action selector="left_year_action:" destination="-1" eventType="touchUpInside" id="aTQ-02-UkL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-kM-VOe">
+                            <rect key="frame" x="257" y="21" width="32" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="W8K-m5-End"/>
+                                <constraint firstAttribute="width" constant="32" id="okh-Lf-EMP"/>
+                            </constraints>
+                            <state key="normal" image="right_month"/>
+                            <connections>
+                                <action selector="right_month_action:" destination="-1" eventType="touchUpInside" id="TCZ-7q-kvU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-uK-VTF">
+                            <rect key="frame" x="296" y="21" width="35" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="2eJ-9U-GLZ"/>
+                                <constraint firstAttribute="width" constant="35" id="KLh-mU-ai5"/>
+                            </constraints>
+                            <state key="normal" image="right_year"/>
+                            <connections>
+                                <action selector="right_year_action:" destination="-1" eventType="touchUpInside" id="wY3-eQ-XpU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nfx-1d-13g" secondAttribute="trailing" id="1M2-ND-pcN"/>
+                        <constraint firstItem="WI0-uK-VTF" firstAttribute="centerY" secondItem="2H9-PH-qpq" secondAttribute="centerY" id="54s-x9-cJ8"/>
+                        <constraint firstAttribute="bottom" secondItem="nfx-1d-13g" secondAttribute="bottom" id="8Pp-Cn-dCd"/>
+                        <constraint firstItem="WI0-uK-VTF" firstAttribute="leading" secondItem="7VS-kM-VOe" secondAttribute="trailing" constant="7" id="Dgd-Y1-tJv"/>
+                        <constraint firstItem="nfx-1d-13g" firstAttribute="leading" secondItem="3h1-Dd-Dwg" secondAttribute="leading" id="FKt-HP-un2"/>
+                        <constraint firstItem="nfx-1d-13g" firstAttribute="top" secondItem="3h1-Dd-Dwg" secondAttribute="top" constant="50" id="Fll-38-yGq"/>
+                        <constraint firstItem="2H9-PH-qpq" firstAttribute="centerX" secondItem="3h1-Dd-Dwg" secondAttribute="centerX" id="Lyz-ZS-MC1"/>
+                        <constraint firstItem="QQG-4Z-bzk" firstAttribute="centerY" secondItem="2H9-PH-qpq" secondAttribute="centerY" id="a9c-Pa-em2"/>
+                        <constraint firstItem="kF2-bg-5Tz" firstAttribute="centerY" secondItem="2H9-PH-qpq" secondAttribute="centerY" id="ae1-fB-aZz"/>
+                        <constraint firstItem="2H9-PH-qpq" firstAttribute="leading" secondItem="QQG-4Z-bzk" secondAttribute="trailing" constant="25" id="cb3-S8-Jal"/>
+                        <constraint firstItem="7VS-kM-VOe" firstAttribute="centerY" secondItem="2H9-PH-qpq" secondAttribute="centerY" id="d9L-Jd-jVd"/>
+                        <constraint firstItem="QQG-4Z-bzk" firstAttribute="leading" secondItem="kF2-bg-5Tz" secondAttribute="trailing" constant="7" id="r1F-kZ-CUP"/>
+                        <constraint firstItem="2H9-PH-qpq" firstAttribute="top" secondItem="3h1-Dd-Dwg" secondAttribute="top" constant="20" id="t3x-7R-oAJ"/>
+                        <constraint firstAttribute="height" constant="400" id="ujj-sH-Sw2"/>
+                        <constraint firstItem="7VS-kM-VOe" firstAttribute="leading" secondItem="2H9-PH-qpq" secondAttribute="trailing" constant="25" id="yqy-aK-fHR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-7f-GlY">
+                    <rect key="frame" x="0.0" y="544" width="414" height="318"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="9HI-5v-s3h" appends="YES" id="hc8-GM-ofJ"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="3h1-Dd-Dwg" firstAttribute="top" secondItem="u2M-8A-CQG" secondAttribute="bottom" id="0cj-Gd-pxw"/>
+                <constraint firstItem="sUF-7f-GlY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5tx-lV-dRC"/>
+                <constraint firstItem="u2M-8A-CQG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DFC-q1-MIh"/>
+                <constraint firstItem="sUF-7f-GlY" firstAttribute="top" secondItem="3h1-Dd-Dwg" secondAttribute="bottom" id="Jba-V4-fa6"/>
+                <constraint firstItem="sUF-7f-GlY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OHX-gs-ss8"/>
+                <constraint firstItem="u2M-8A-CQG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rrg-Cr-Bdc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3h1-Dd-Dwg" secondAttribute="trailing" constant="20" id="hT7-4U-k6P"/>
+                <constraint firstItem="3h1-Dd-Dwg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ihr-qo-cpl"/>
+                <constraint firstItem="3h1-Dd-Dwg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="rDh-c2-zaK"/>
+                <constraint firstItem="u2M-8A-CQG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xUP-Iq-rqW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sUF-7f-GlY" secondAttribute="bottom" id="yjw-r9-mMF"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+        </view>
+        <tapGestureRecognizer id="9HI-5v-s3h">
+            <connections>
+                <action selector="tapToHiddenDateViewAction:" destination="-1" id="vI9-es-IR1"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="1eM-O2-BTx">
+            <connections>
+                <action selector="tapToHiddenDateViewAction:" destination="-1" id="fdH-Lz-Qa3"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="left_month" width="32" height="20"/>
+        <image name="left_year" width="35" height="20"/>
+        <image name="right_month" width="32" height="20"/>
+        <image name="right_year" width="35" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

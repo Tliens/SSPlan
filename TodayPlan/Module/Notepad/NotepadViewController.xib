@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotepadViewController" customModule="TodayPlan" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="R8p-6y-LLn" id="pWE-42-OYJ"/>
+                <outlet property="notepadStateLabel" destination="IwS-s7-NKS" id="PZF-Fz-nCg"/>
+                <outlet property="sliderView" destination="u2M-g3-fWl" id="YW8-CQ-azC"/>
+                <outlet property="sliderViewRight" destination="92c-iy-rcg" id="Dpo-3f-9FQ"/>
+                <outlet property="tableView" destination="22C-TN-V2Y" id="s3t-bw-PO5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="22C-TN-V2Y">
+                    <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-7Y-1SV">
+                    <rect key="frame" x="354" y="52" width="40" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="gtg-mr-O8w"/>
+                        <constraint firstAttribute="height" constant="22" id="ir2-AB-hSU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="清空">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clearBtnAction:" destination="-1" eventType="touchUpInside" id="dkg-qN-0Rd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEG-Zg-8AJ">
+                    <rect key="frame" x="344" y="752" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5YN-3Q-Akd"/>
+                        <constraint firstAttribute="width" constant="50" id="PrY-BP-j81"/>
+                    </constraints>
+                    <state key="normal" image="notepad_item_add">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="selected" image="notepad_item_add"/>
+                    <state key="highlighted" image="notepad_item_add"/>
+                    <connections>
+                        <action selector="addNewNotepadItemAction:" destination="-1" eventType="touchUpInside" id="IH8-0n-pOJ"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8p-6y-LLn">
+                    <rect key="frame" x="20" y="824" width="374" height="18"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="sjL-BO-Rlv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2M-g3-fWl">
+                    <rect key="frame" x="20" y="824" width="394" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.56862745100000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="JUq-WL-Qus"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwS-s7-NKS">
+                    <rect key="frame" x="188.5" y="824.5" width="37" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="22C-TN-V2Y" secondAttribute="trailing" id="0nB-at-rlW"/>
+                <constraint firstItem="IwS-s7-NKS" firstAttribute="centerY" secondItem="R8p-6y-LLn" secondAttribute="centerY" id="7TY-D0-9Yd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u2M-g3-fWl" secondAttribute="trailing" id="92c-iy-rcg"/>
+                <constraint firstItem="R8p-6y-LLn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DVQ-KI-lBa"/>
+                <constraint firstItem="22C-TN-V2Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GzZ-3H-3fg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R8p-6y-LLn" secondAttribute="trailing" constant="20" id="KOt-nq-VFM"/>
+                <constraint firstItem="IwS-s7-NKS" firstAttribute="centerX" secondItem="R8p-6y-LLn" secondAttribute="centerX" id="Kuc-p6-CES"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="R8p-6y-LLn" secondAttribute="bottom" constant="20" id="Pkl-hL-72d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k0S-7Y-1SV" secondAttribute="trailing" constant="20" id="Pxd-yl-1dK"/>
+                <constraint firstItem="u2M-g3-fWl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZR1-QA-gZW"/>
+                <constraint firstItem="k0S-7Y-1SV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="ahA-dG-9ON"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="u2M-g3-fWl" secondAttribute="bottom" constant="20" id="dwT-D1-Atq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wEG-Zg-8AJ" secondAttribute="bottom" constant="60" id="dz8-Jq-keL"/>
+                <constraint firstItem="22C-TN-V2Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="eoz-q1-btL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="22C-TN-V2Y" secondAttribute="bottom" id="pYX-AY-qEB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wEG-Zg-8AJ" secondAttribute="trailing" constant="20" id="yS9-MQ-MDh"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="notepad_item_add" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
